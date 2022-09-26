@@ -1,0 +1,146 @@
+.container {
+    position: relative;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+}
+
+.headerLeft {
+    position: relative;
+    flex-grow: 0;
+    width: 0px;
+    height: 100%;
+    display: none;
+}
+.headerCenter {
+    position: relative;
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.headerRight {
+    position: relative;
+    flex-grow: 0;
+    width: 110px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerTitle {
+    margin: 0 0 0 0.75em;
+}
+
+.main {
+    position: relative;
+    margin-top: 60px;
+    height: calc(100% - 60px);
+    z-index: 1;
+}
+.inner {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro {
+    position: relative;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.introText {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 2em;
+}
+.introName {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.action {
+    position: relative;
+}
+.button {
+    box-sizing: border-box;
+    width: 100%;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: #FFF;
+    border: 0;
+    border-radius: 20px;
+    padding: 0.75em 1em;
+    outline: none;
+    margin-bottom: 0.5em;
+}
+.color1 {
+    background-color: #67AEFF;
+}
+.color2 {
+    background-color: #48CFAD;
+}
+.color3 {
+    background-color: #FF6767;
+}
+
+.logout {
+    border: 0;
+    color: #fff;
+    outline: none;
+    background-color: transparent;
+    border-radius: 6px;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    transition: 0.5s ease;
+}
+.logout:active {
+    background-color: #FFF1;
+}
+
+@media (min-width: 400px) {
+    .headerLeft {
+        width: 110px;
+        display: block;
+    }
+    .headerCenter {
+        justify-content: center;
+    }
+    .headerTitle {
+        margin: 0;
+    }
+    .action {
+        width: 70%;
+    }
+}
+
+@media (min-width: 600px) {
+    .action {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .button {
+        width: 200px;
+        margin-left: 5px;
+    }
+}
